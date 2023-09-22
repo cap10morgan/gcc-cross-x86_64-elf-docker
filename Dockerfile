@@ -34,3 +34,5 @@ RUN cd /usr/local/src && mkdir build-gcc && cd build-gcc && \
   ../gcc-${GCC_VERSION}/configure --target=$TARGET --prefix="$PREFIX" \
   --disable-nls --enable-languages=c,c++ --without-headers && \
   make all-gcc && make all-target-libgcc && make install-gcc && make install-target-libgcc
+
+RUN echo "export PATH=$PREFIX/bin:\$PATH" >> /root/.bashrc

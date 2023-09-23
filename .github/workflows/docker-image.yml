@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "__disabled__" ] # times out on free runners
 
 env:
   REGISTRY_IMAGE: cap10morgan/gcc-cross-x86_64-elf
